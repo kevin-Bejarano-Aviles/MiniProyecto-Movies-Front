@@ -1,15 +1,19 @@
-import { Routes,Route,useParams } from 'react-router-dom';
-import { CreateMovie } from '../components/CreateMovie';
-import { ListMovies } from '../components/ListMovies';
-import { MovieDetail } from '../components/MovieDetail';
-import { ActorDetail } from '../components/ActorDetail';
-import { GenreDetail } from '../components/GenreDetail';
-import { AddActorToMovie } from '../components/AddActorToMovie';
-import { EditMovie } from '../components/EditMovie';
-import { Welcome } from '../components/Welcome';
+import { Routes,Route } from 'react-router-dom';
+import {
+   Welcome,
+   ActorDetail,
+   AddActorToMovie,
+   CreateMovie,
+   EditMovie,
+   GenreDetail,
+   ListMovies,
+   Login,
+   MovieDetail,
+   Register
+} from "../pages"
+
 
 export const PublicRoutes = () => {
-  const {id}= useParams()
   return (
     <Routes>
       <Route 
@@ -44,6 +48,14 @@ export const PublicRoutes = () => {
         path='/genres/detail/:id'
         element={<GenreDetail/>}
       />
+      {/* <Route 
+        path='/users/register'
+        element={<Register/>}
+      />
+      <Route 
+        path='/users/login'
+        element={<Login/>}
+      /> */}
     </Routes>
   )
 }

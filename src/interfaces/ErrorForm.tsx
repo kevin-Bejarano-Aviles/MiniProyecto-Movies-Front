@@ -6,19 +6,19 @@ export interface ReqErrorForm {
 }
 
 export interface Data {
-    errors: Errors;
+    errors: ErrorField;
 }
 
-export interface Errors {
-    title:        Campo;
-    rating:       Campo;
-    awards:       Campo;
-    length:       Campo;
-    release_date: Campo;
-    genre_id:     Campo;
-}
 
-export interface Campo {
+export interface ErrorField {
+    title:        ErrorContent;
+    rating:       ErrorContent;
+    awards:       ErrorContent;
+    length:       ErrorContent;
+    release_date: ErrorContent;
+    genre_id:     ErrorContent;
+}
+export interface ErrorContent {
     msg:      string;
     param:    string;
     location: string;

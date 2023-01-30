@@ -1,11 +1,11 @@
 import { useState } from 'react';
-import { Errors, ReqErrorForm } from '../../interfaces/ErrorForm';
+import { ErrorField, ReqErrorForm } from '../../interfaces/ErrorForm';
 import { moviesApi } from '../moviesApi';
 import { AxiosError } from 'axios';
 import { useNavigate } from 'react-router-dom';
-import { DataFormMovie } from '../../interfaces/OneMovie';
+import { DataFormMovie } from '../../interfaces/Movies';
 export const UsePut = () => {
-    const [errors, setErrors] = useState<Errors>()
+    const [errors, setErrors] = useState<ErrorField>()
     const navigate= useNavigate()
     const updateMovie = async(values:DataFormMovie,id:string|undefined)=>{
       try {
@@ -14,7 +14,6 @@ export const UsePut = () => {
       } catch (error) {
         const err = error as AxiosError;
         const laData = err.response?.data as ReqErrorForm
-        // console.log(laData.data.errors);
         setErrors(laData.data.errors)
       }
     }

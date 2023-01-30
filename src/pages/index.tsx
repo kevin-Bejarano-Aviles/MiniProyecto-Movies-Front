@@ -1,0 +1,10 @@
+export { ActorDetail } from './ActorDetail';
+export { AddActorToMovie } from './AddActorToMovie';
+export { CreateMovie } from './CreateMovie';
+export { EditMovie } from './EditMovie';
+export { GenreDetail } from './GenreDetail';
+export { ListMovies } from './ListMovies';
+export { Login } from './Login';
+export { MovieDetail } from './MovieDetail';
+export { Register } from './Register';
+export { Welcome } from './Welcome';
